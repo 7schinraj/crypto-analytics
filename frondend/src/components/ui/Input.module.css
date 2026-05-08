@@ -1,0 +1,85 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: var(--space-4);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 11px var(--space-4);
+  background: var(--color-bg-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.withIcon {
+  padding-left: 44px;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-3);
+}
+
+.input:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-bg-3);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.inputError {
+  border-color: var(--color-error) !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+.rightElement {
+  position: absolute;
+  right: var(--space-4);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.errorMsg {
+  font-size: var(--text-xs);
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: 4px;
+}

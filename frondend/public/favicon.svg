@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    
+    <!-- Neon Accent Glow Gradient -->
+    <linearGradient id="glowing-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />  <!-- Cyan-400 -->
+      <stop offset="50%" stop-color="#3b82f6" /> <!-- Blue-500 -->
+      <stop offset="100%" stop-color="#8b5cf6" /> <!-- Violet-500 -->
+    </linearGradient>
+
+    <!-- Metallic Gold Gradient for Coin Representation -->
+    <linearGradient id="gold-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />  <!-- Amber-400 -->
+      <stop offset="50%" stop-color="#f59e0b" /> <!-- Amber-500 -->
+      <stop offset="100%" stop-color="#d97706" /> <!-- Amber-600 -->
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Depth -->
+    <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Sphere Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bg-grad)" stroke="url(#glowing-accent)" stroke-width="12" />
+
+  <!-- Inner Glowing Coin Outline -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#glowing-accent)" stroke-width="4" stroke-dasharray="16 8" opacity="0.6" />
+
+  <!-- Premium Abstract Cryptocurrency Symbol (Combining '₿' and growth lines) -->
+  <g filter="url(#glow-effect)" transform="translate(16, 8)">
+    <!-- Ascending Financial Blockchain Node Bars (Growth) -->
+    <rect x="150" y="270" width="24" height="70" rx="6" fill="url(#glowing-accent)" opacity="0.4" />
+    <rect x="190" y="210" width="24" height="130" rx="6" fill="url(#glowing-accent)" opacity="0.6" />
+    <rect x="230" y="150" width="24" height="190" rx="6" fill="url(#glowing-accent)" opacity="0.8" />
+    <rect x="270" y="110" width="24" height="230" rx="6" fill="url(#glowing-accent)" />
+    
+    <!-- Stylish Connection Line (Trend) -->
+    <path d="M 162 270 L 202 210 L 242 150 L 282 110" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Floating Crypto Sphere Nodes -->
+    <circle cx="162" cy="270" r="10" fill="#ffffff" />
+    <circle cx="202" cy="210" r="10" fill="#ffffff" />
+    <circle cx="242" cy="150" r="10" fill="#ffffff" />
+    <circle cx="282" cy="110" r="14" fill="#38bdf8" stroke="#ffffff" stroke-width="4" />
+    
+    <!-- Elegant Stylized Bitcoin Core Logo overlay -->
+    <path d="M340 180 C365 180 380 195 380 215 C380 230 370 240 355 245 C375 250 385 265 385 285 C385 310 365 320 335 320 L290 320 L290 180 Z M315 205 L315 235 L335 235 C345 235 352 230 352 220 C352 210 345 205 335 205 Z M315 260 L315 295 L340 295 C350 295 358 290 358 277 C358 265 350 260 340 260 Z" fill="url(#gold-grad)" />
+    <!-- Vertical bits of BTC symbol -->
+    <rect x="310" y="160" width="8" height="25" rx="3" fill="url(#gold-grad)" />
+    <rect x="330" y="160" width="8" height="25" rx="3" fill="url(#gold-grad)" />
+    <rect x="310" y="315" width="8" height="25" rx="3" fill="url(#gold-grad)" />
+    <rect x="330" y="315" width="8" height="25" rx="3" fill="url(#gold-grad)" />
+  </g>
+</svg>

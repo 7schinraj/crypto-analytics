@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+pydantic-settings
+python-dotenv
+aiohttp
+bcrypt
+PyJWT
+pytest
+httpx
+alembic
+aiosqlite
+apscheduler
+pandas
+numpy

@@ -1,0 +1,189 @@
+/* ================================================
+   AUTH LAYOUT — LIGHT THEME (violet primary)
+   Split: Left decorative panel | Right form panel
+   ================================================ */
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  min-height: 100svh;
+  background: var(--color-bg-2);
+}
+
+/* ── Left decorative panel ───────────────────── */
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  min-height: 100svh;
+  background: linear-gradient(145deg, #1e1b4b 0%, #3b1fa8 60%, #7c3aed 100%);
+}
+
+.heroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.08;
+  mix-blend-mode: luminosity;
+}
+
+.panelOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(30, 27, 75, 0.0)  0%,
+    rgba(30, 27, 75, 0.55) 70%,
+    rgba(124, 58, 237, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Brand badge ─────────────────────────────── */
+.brand {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: auto;
+}
+
+.brandIcon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+/* ── Hero copy ───────────────────────────────── */
+.heroContent {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+  padding-bottom: 40px;
+}
+
+.heroHeadline {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+}
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.65;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+/* ── Stat pills ──────────────────────────────── */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.statPill {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 14px 20px;
+  min-width: 120px;
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c4b5fd;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ── Trust badges ────────────────────────────── */
+.trust {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.60);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ── Right form panel ────────────────────────── */
+.formPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #fff;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .page {
+    grid-template-columns: 1fr;
+    min-height: 100svh;
+  }
+  .panel {
+    display: none; /* Hide business explanation completely on mobile and tablet */
+  }
+  .formPanel {
+    padding: 40px 24px;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+}
