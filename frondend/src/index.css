@@ -235,7 +235,6 @@ a { color: var(--primary); text-decoration: none; }
   background: var(--sidebar-active);
   color: var(--sidebar-active-text);
   font-weight: 600;
-  box-shadow: inset 3px 0 0 var(--primary-light);
 }
 .sidebar-link .nav-icon {
   flex-shrink: 0;
